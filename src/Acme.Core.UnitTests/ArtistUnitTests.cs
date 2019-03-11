@@ -13,23 +13,23 @@ namespace Acme.Core.UnitTests
     public class ArtistUnitTests
     {
         private TestRepository _testRepository;
-        private TestCommandDispatcher _testCommandDispatcher;
+        private TestCommandBus _testCommandBus;
 
         [SetUp]
         public void Setup()
         {
             _testRepository = new TestRepository();
-            _testCommandDispatcher = new TestCommandDispatcher();
+            _testCommandBus = new TestCommandBus();
 
             CreateArtistCommandHandler createArtistCommandHandler = new CreateArtistCommandHandler(_testRepository);
-            _testCommandDispatcher.RegisterHandler<CreateArtistCommand>(x=> createArtistCommandHandler.Handle(x));
+            _testCommandBus.RegisterHandler<CreateArtistCommand>(x=> createArtistCommandHandler.Handle(x));
         }
 
         [Test]
         public async Task CreateAblum_writes_to_repository()
         {
             CreateArtistCommand command = new CreateArtistCommand(Guid.NewGuid(), "Bobby Tester");
-            await _testCommandDispatcher.Dispatch(command);
+            await _testCommandBus.Dispatch(command);
 
             var savedEntity = _testRepository.TestEntities.FirstOrDefault(x => x.Id == command.Id) as Artist;
             Assert.IsNotNull(savedEntity);

@@ -3,7 +3,7 @@ using Acme.Core.Kernal.Commands;
 
 namespace Acme.Core.Ports
 {
-    public interface ICommandDispatcher
+    public interface ICommandBus
     {
         Task Dispatch<TCommand>(TCommand command) where TCommand : ICommand;
     }

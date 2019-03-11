@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Acme.Adapters.Command.Test
 {
-    public class TestCommandDispatcher : ICommandDispatcher
+    public class TestCommandBus : ICommandBus
     {
         private readonly Dictionary<Type, List<Func<ICommand, Task>>> _routes = new Dictionary<Type, List<Func<ICommand, Task>>>();
 

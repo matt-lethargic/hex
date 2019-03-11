@@ -14,26 +14,26 @@ namespace Acme.Core.UnitTests
     public class AlbumUnitTests
     {
         private TestRepository _testRepository;
-        private TestCommandDispatcher _testCommandDispatcher;
+        private TestCommandBus _testCommandBus;
 
         [SetUp]
         public void Setup()
         {
             _testRepository = new TestRepository();
-            _testCommandDispatcher = new TestCommandDispatcher();
+            _testCommandBus = new TestCommandBus();
 
             CreateAlbumCommandHandler createHandler = new CreateAlbumCommandHandler(_testRepository);
             SetAlbumArtistCommandHandler setHandler = new SetAlbumArtistCommandHandler(_testRepository);
 
-            _testCommandDispatcher.RegisterHandler<CreateAlbumCommand>(x => createHandler.Handle(x));
-            _testCommandDispatcher.RegisterHandler<SetAlbumArtistCommand>(x => setHandler.Handle(x));
+            _testCommandBus.RegisterHandler<CreateAlbumCommand>(x => createHandler.Handle(x));
+            _testCommandBus.RegisterHandler<SetAlbumArtistCommand>(x => setHandler.Handle(x));
         }
 
         [Test]
         public async Task CreateAblum_writes_to_repository()
         {
             CreateAlbumCommand command = new CreateAlbumCommand(Guid.NewGuid(), "Testsville Centrl");
-            await _testCommandDispatcher.Dispatch(command);
+            await _testCommandBus.Dispatch(command);
 
             var savedEntity = _testRepository.TestEntities.FirstOrDefault(x => x.Id == command.Id) as Album;
             Assert.IsNotNull(savedEntity);
@@ -51,7 +51,7 @@ namespace Acme.Core.UnitTests
 
 
             SetAlbumArtistCommand command = new SetAlbumArtistCommand(album.Id, artist.Id);
-            await _testCommandDispatcher.Dispatch(command);
+            await _testCommandBus.Dispatch(command);
 
             var savedAlbum = _testRepository.TestEntities.OfType<Album>().FirstOrDefault(x => x.Id == album.Id);
             var savedArtist = _testRepository.TestEntities.OfType<Artist>().FirstOrDefault(x => x.Id == artist.Id);
