@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acme.Core", "Acme.Core\Acme.Core.csproj", "{BA055ADA-5199-4A42-ABCF-403F93A6B37F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{88756302-E03B-4D15-865E-E3314E2E384B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acme.Adapters.Repository.Test", "Acme.Ports.Repository.Test\Acme.Adapters.Repository.Test.csproj", "{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Core.UnitTests", "Acme.Core.UnitTests\Acme.Core.UnitTests.csproj", "{987A9B8E-384A-4A48-927C-1F3B4B681BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Adapters.Command.Test", "Acme.Adapters.Command.Test\Acme.Adapters.Command.Test.csproj", "{5800E6E7-4795-407E-B626-833D64C599EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Debug|x86.Build.0 = Debug|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA055ADA-5199-4A42-ABCF-403F93A6B37F}.Release|x86.Build.0 = Release|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A}.Release|x86.Build.0 = Release|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{987A9B8E-384A-4A48-927C-1F3B4B681BFC}.Release|x86.Build.0 = Release|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{5800E6E7-4795-407E-B626-833D64C599EA}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C7590FD-9D78-4B67-8F35-AE5708C9C67A} = {88756302-E03B-4D15-865E-E3314E2E384B}
+		{5800E6E7-4795-407E-B626-833D64C599EA} = {88756302-E03B-4D15-865E-E3314E2E384B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F98A1F0-A7D6-4E90-B826-81459C3AD722}
+	EndGlobalSection
+EndGlobal
