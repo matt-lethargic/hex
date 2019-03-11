@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace Acme.Core.Kernal.Commands
 {
-    public interface ICommandHandler<in TCommand> where TCommand : ICommand
+    public interface ICommandHandler<in TCommand> 
     {
         Task Handle(TCommand command);
     }

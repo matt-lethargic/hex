@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Acme.Core.Kernal;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using Acme.Core.Kernal;
 
 namespace Acme.Core.Artists
 {
@@ -14,6 +13,7 @@ namespace Acme.Core.Artists
         public Artist(Guid id, string name)
             : base(id)
         {
+            Name = name;
             AlbumIds = new List<Guid>();
         }
 

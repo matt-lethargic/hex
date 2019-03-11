@@ -25,8 +25,8 @@ namespace Acme.Core.UnitTests
             CreateAlbumCommandHandler createHandler = new CreateAlbumCommandHandler(_testRepository);
             SetAlbumArtistCommandHandler setHandler = new SetAlbumArtistCommandHandler(_testRepository);
 
-            _testCommandDispatcher.RegisterHandler<CreateAlbumCommand>(x => createHandler.Handle(x as CreateAlbumCommand));
-            _testCommandDispatcher.RegisterHandler<SetAlbumArtistCommand>(x => setHandler.Handle(x as SetAlbumArtistCommand));
+            _testCommandDispatcher.RegisterHandler<CreateAlbumCommand>(x => createHandler.Handle(x));
+            _testCommandDispatcher.RegisterHandler<SetAlbumArtistCommand>(x => setHandler.Handle(x));
         }
 
         [Test]
